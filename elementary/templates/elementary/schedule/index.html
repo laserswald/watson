@@ -1,0 +1,23 @@
+{% extends "elementary/base.html" %}
+
+{% block content %}
+<div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            Events
+        </div>
+        <table class="table">
+            <tr>
+                <th>Name</th>
+                <th>Date</th>
+            </tr>
+            {% for event in object_list %}
+            <tr>
+                <td>{{ event.name }}</td>
+                <td>{{ event.date }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</div>
+{% endblock %}

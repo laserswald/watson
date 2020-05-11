@@ -1,0 +1,23 @@
+{% extends "elementary/base.html" %}
+
+{% block content %}
+<div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            Messages
+        </div>
+        <table class="table">
+            <tr>
+                <th>From</th>
+                <th>Subject</th>
+            </tr>
+            {% for message in object_list %}
+            <tr>
+                <td>{{ message.get_sender_name }}</td>
+                <td>{{ message.subject }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</div>
+{% endblock %}

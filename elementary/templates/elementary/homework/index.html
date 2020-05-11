@@ -1,0 +1,27 @@
+{% extends "elementary/base.html" %}
+
+{% block content %}
+<div>
+    {% for student in object_list %}
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            {{ student }}
+        </div>
+        <table class="table">
+            <tr>
+                <th>Name</th>
+                <th>Subject</th>
+                <th>Date</th>
+            </tr>
+            {% for assignment in student.assignments %}
+            <tr>
+                <td>{{ assignment.name }}</td>
+                <td>{{ assignment.subject }}</td>
+                <td>{{ assignment.date }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

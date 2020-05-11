@@ -1,0 +1,73 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/5a4b6d04/
+Assignment	models.py	/^class Assignment(models.Model):$/;"	c
+Attendance	models.py	/^class Attendance(models.Model):$/;"	c
+Event	models.py	/^class Event(models.Model):$/;"	c
+FirstAndLastNameAsString	models.py	/^class FirstAndLastNameAsString:$/;"	c
+Grade	models.py	/^class Grade(models.Model):$/;"	c
+Guardian	models.py	/^class Guardian(FirstAndLastNameAsString, models.Model):$/;"	c
+HomeworkIndex	views.py	/^class HomeworkIndex(generic.ListView):$/;"	c
+Message	models.py	/^class Message(models.Model):$/;"	c
+MessagesIndex	views.py	/^class MessagesIndex(generic.ListView):$/;"	c
+ScheduleIndex	views.py	/^class ScheduleIndex(generic.ListView):$/;"	c
+Student	models.py	/^class Student(models.Model):$/;"	c
+Subject	models.py	/^class Subject(models.Model):$/;"	c
+Teacher	models.py	/^class Teacher(FirstAndLastNameAsString, models.Model):$/;"	c
+Wish	models.py	/^class Wish(models.Model):$/;"	c
+WishResponse	models.py	/^class WishResponse(models.Model):$/;"	c
+WishlistIndex	views.py	/^class WishlistIndex(generic.ListView):$/;"	c
+__str__	models.py	/^    def __str__(self):$/;"	m	class:Assignment	signature:(self)
+__str__	models.py	/^    def __str__(self):$/;"	m	class:Attendance	signature:(self)
+__str__	models.py	/^    def __str__(self):$/;"	m	class:Event	signature:(self)
+__str__	models.py	/^    def __str__(self):$/;"	m	class:FirstAndLastNameAsString	signature:(self)
+__str__	models.py	/^    def __str__(self):$/;"	m	class:Message	signature:(self)
+__str__	models.py	/^    def __str__(self):$/;"	m	class:Student	signature:(self)
+__str__	models.py	/^    def __str__(self):$/;"	m	class:Subject	signature:(self)
+__str__	models.py	/^    def __str__(self):$/;"	m	class:Wish	signature:(self)
+assignment	models.py	/^    assignment = models.ForeignKey(Assignment, related_name="submissions")$/;"	v	class:Grade
+assignments	models.py	/^    def assignments(self):$/;"	m	class:Student	signature:(self)
+body	models.py	/^    body = models.TextField()$/;"	v	class:Message
+body	models.py	/^    body = models.TextField()$/;"	v	class:WishResponse
+check_login	views.py	/^def check_login(request):$/;"	f	signature:(request)
+date	models.py	/^    date = models.DateField()$/;"	v	class:Assignment
+date	models.py	/^    date = models.DateField()$/;"	v	class:Event
+dependents	models.py	/^    dependents = models.ManyToManyField("Student")$/;"	v	class:Guardian
+description	models.py	/^    description = models.TextField()$/;"	v	class:Assignment
+description	models.py	/^    description = models.TextField()$/;"	v	class:Wish
+first_name	models.py	/^    first_name = models.CharField(max_length=60)$/;"	v	class:Student
+get_full_name	models.py	/^    def get_full_name(self):$/;"	m	class:Teacher	signature:(self)
+get_queryset	views.py	/^    def get_queryset(self):$/;"	m	class:HomeworkIndex	signature:(self)
+get_queryset	views.py	/^    def get_queryset(self):$/;"	m	class:MessagesIndex	signature:(self)
+get_queryset	views.py	/^    def get_queryset(self):$/;"	m	class:ScheduleIndex	signature:(self)
+get_queryset	views.py	/^    def get_queryset(self):$/;"	m	class:WishlistIndex	signature:(self)
+get_sender_name	models.py	/^    def get_sender_name(self):$/;"	m	class:Message	signature:(self)
+grade	models.py	/^    grade = models.IntegerField()$/;"	v	class:Grade
+index	views.py	/^def index(request):$/;"	f	signature:(request)
+last_name	models.py	/^    last_name = models.CharField(max_length=60)$/;"	v	class:Student
+name	models.py	/^    name = models.CharField(max_length=200)$/;"	v	class:Assignment
+name	models.py	/^    name = models.CharField(max_length=200)$/;"	v	class:Event
+name	models.py	/^    name = models.CharField(max_length=200)$/;"	v	class:Wish
+name	models.py	/^    name = models.CharField(max_length=50)$/;"	v	class:Subject
+recipients	models.py	/^    recipients = models.ManyToManyField(User, related_name="recieved_msgs")$/;"	v	class:Message
+responder	models.py	/^    responder = models.ForeignKey(Guardian, related_name="wish_responses")$/;"	v	class:WishResponse
+sender	models.py	/^    sender = models.ForeignKey(User, on_delete=models.CASCADE, related_name="sent_msgs")$/;"	v	class:Message
+student	models.py	/^    student = models.ForeignKey(Student, related_name="grades")$/;"	v	class:Grade
+student	models.py	/^    student = models.ForeignKey(Student, related_name="subjects")$/;"	v	class:Attendance
+subject	models.py	/^    subject = models.CharField(max_length=200)$/;"	v	class:Message
+subject	models.py	/^    subject = models.ForeignKey(Subject, related_name="assignments")$/;"	v	class:Assignment
+subject	models.py	/^    subject = models.ForeignKey(Subject, related_name="students")$/;"	v	class:Attendance
+teacher	models.py	/^    teacher = models.ForeignKey(Teacher, related_name="events")$/;"	v	class:Event
+teacher	models.py	/^    teacher = models.ForeignKey(Teacher, related_name="subjects")$/;"	v	class:Subject
+template_name	views.py	/^    template_name = 'elementary\/homework\/index.html'$/;"	v	class:HomeworkIndex
+template_name	views.py	/^    template_name = 'elementary\/messages\/index.html'$/;"	v	class:MessagesIndex
+template_name	views.py	/^    template_name = 'elementary\/schedule\/index.html'$/;"	v	class:ScheduleIndex
+template_name	views.py	/^    template_name = 'elementary\/wishlist\/index.html'$/;"	v	class:WishlistIndex
+user	models.py	/^    user = models.ForeignKey(User, on_delete=models.CASCADE)$/;"	v	class:Guardian
+user	models.py	/^    user = models.ForeignKey(User, on_delete=models.CASCADE)$/;"	v	class:Teacher
+wish	models.py	/^    wish = models.ForeignKey(Wish, related_name="responses")$/;"	v	class:WishResponse
+wisher	models.py	/^    wisher = models.ForeignKey(Teacher, related_name="wishes")$/;"	v	class:Wish
